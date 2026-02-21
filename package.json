@@ -8,7 +8,9 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "server": "npm run start --prefix server",
-    "db:setup": "node scripts/setup_db.js"
+    "db:setup": "node scripts/setup_db.js",
+    "build:server": "npm install --prefix server && npm run build --prefix server",
+    "start:server": "node server/dist/index.js"
   },
   "dependencies": {
     "@react-navigation/bottom-tabs": "^7.12.0",

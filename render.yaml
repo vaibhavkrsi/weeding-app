@@ -2,18 +2,18 @@ services:
   - type: web
     name: wedding-app-api
     runtime: node
-    buildCommand: cd server && npm install && npm run build
-    startCommand: cd server && npm start
+    buildCommand: npm run build:server
+    startCommand: npm run start:server
     envVars:
       - key: NODE_ENV
         value: production
       - key: PORT
         value: 10000
       - key: DATABASE_URL
-        sync: false       # Set manually in Render dashboard
+        sync: false
       - key: JWT_SECRET
-        sync: false       # Set manually in Render dashboard
+        sync: false
       - key: RESEND_API_KEY
-        sync: false       # Set manually in Render dashboard
+        sync: false
       - key: APP_URL
-        sync: false       # Set to your Render URL after first deploy
+        sync: false
