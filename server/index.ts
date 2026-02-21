@@ -1,8 +1,11 @@
 import path from 'path';
 import dotenv from 'dotenv';
 
-// Load environment variables from root directory BEFORE other imports
-dotenv.config({ path: path.join(__dirname, '../.env') });
+// Load .env from root (local dev) or fall back to process env (Render/production)
+dotenv.config({ path: path.join(__dirname, '../../.env') }); // compiled: dist/ -> server/ -> root
+dotenv.config({ path: path.join(__dirname, '../.env') });    // fallback for ts-node dev
+dotenv.config();                                              // final fallback (Render injects vars)
+
 
 import express from 'express';
 import cors from 'cors';
