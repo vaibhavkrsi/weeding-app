@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "RnCheckExpo",
-    "slug": "RnCheckExpo",
+    "slug": "wedding-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -20,10 +20,20 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.vaibhavkrsisorganization.weddingapp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-secure-store"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "35284a8f-dbc3-4bcc-855b-6127cb00180f"
+      }
+    },
+    "owner": "vaibhavkrsis-organization"
   }
 }
